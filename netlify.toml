@@ -1,0 +1,38 @@
+functionsDirectory = "/Users/tamzi/Desktop/jec/tktsync/portal-mockups/netlify/functions"
+functionsDirectoryOrigin = "config"
+headersOrigin = "config"
+plugins = []
+redirects = []
+
+[build]
+publish = "/Users/tamzi/Desktop/jec/tktsync/portal-mockups/dist"
+publishOrigin = "config"
+command = "npm run check"
+commandOrigin = "config"
+functions = "/Users/tamzi/Desktop/jec/tktsync/portal-mockups/netlify/functions"
+
+  [build.environment]
+  NODE_VERSION = "26"
+
+  [build.processing]
+
+    [build.processing.css]
+
+    [build.processing.html]
+
+    [build.processing.images]
+
+    [build.processing.js]
+
+  [build.services]
+
+[functions]
+
+  [functions."*"]
+  node_bundler = "esbuild"
+
+[[headers]]
+for = "/*"
+
+  [headers.values]
+  X-Robots-Tag = "noindex, nofollow"
